@@ -40,14 +40,50 @@
 //e fai la somma di tutti gli elementi  
 //che sono in posizione (indice) dispari
 
-let number = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+// let number = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
 
-let som = 0;
+// let som = 0;
 
-for ( let i=1; i<number.length; i+=2){
-    som += number[i];
+// for ( let i=1; i<number.length; i+=2){
+//     som += number[i];
+// }
+
+// console.log(number);
+
+// console.log(som);
+
+//***************************************************** */
+
+
+//*Snack4 (Bonus)*
+//Crea due array che hanno un numero di elementi diversi.  
+//Aggiungi elementi all’array che ha meno elementi fino a quando 
+//ne avrà tanti quanti l’altro.
+
+let first = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+console.log(first);
+
+let second = [ 0, 1, 2, 3, 4, 5, 6];
+console.log(second);
+
+if( first.length > second.length ){
+    let gap = first.length - second.length;
+    for( let i=0; i<gap; i++ ){
+        let add = parseInt(prompt('add a valor'));
+        second.push(add);
+    }
+    console.log(`they're equal!!`);
+} else if( first.length < second.length ){
+    let gap = second.length - first.length;
+    for( let i=0; i<gap ; i++ ){
+        let add = parseInt(prompt('add a valor'));
+        first.push(add);
+    }
+    console.log(`they're equal!!`);
+} else{
+    console.log(`they're equal!!`);
 }
 
-console.log(number);
+console.log(first);
 
-console.log(som);
+console.log(second);
